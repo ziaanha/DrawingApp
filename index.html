@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Drawing App 🎨</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>🎨 Doodle Studio</h1>
+        <p>Let your creativity flow!</p>
+    </header>
+
+    <main class="app">
+        <section class="toolbar">
+            <div class="tool-group">
+                <label for="colorPicker">Brush Color</label>
+                <input type="color" id="colorPicker" value="#ff69b4">
+            </div>
+
+            <div class="tool-group">
+                <label for="brushSize">Brush Size: <span id="sizeValue">5</span>px</label>
+                <input type="range" id="brushSize" min="1" max="50" value="5">
+            </div>
+
+            <div class="tool-buttons">
+                <button id="brushBtn" class="active">🖌️ Brush</button>
+                <button id="eraserBtn">🩹 Eraser</button>
+                <button id="undoBtn">↩️ Undo</button>
+                <button id="redoBtn">↪️ Redo</button>
+                <button id="clearBtn">🗑️ Clear</button>
+                <button id="saveBtn">📥 Save PNG</button>
+            </div>
+        </section>
+
+        <section class="canvas-container">
+            <canvas id="drawingCanvas" aria-label="Drawing canvas"></canvas>
+        </section>
+
+        <p class="hint">✨ Pick a color, choose your brush size, and start doodling!</p>
+    </main>
+
+    <footer>
+        Made with 💗 and a little imagination.
+    </footer>
+</body>
+</html>
